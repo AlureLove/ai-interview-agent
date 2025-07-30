@@ -28,4 +28,13 @@ public class InterviewTest {
         answer = interviewApp.chat(message, chatId);
         Assertions.assertNotNull(answer);
     }
+
+    @Test
+    void testDoChatWithRAG() {
+        String chatId = UUID.randomUUID().toString();
+
+        String message = "What is Java?";
+        String answer = interviewApp.doChatWithRag(message, chatId);
+        Assertions.assertNotNull(answer);
+    }
 }
